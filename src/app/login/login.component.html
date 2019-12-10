@@ -1,0 +1,18 @@
+<div class ="container">
+    <div class="jumbotron mt-5 ">
+        <h1 class="text-sucess text-center">LOGIN PROCESS</h1>
+        <form #form="ngForm" (ngSubmit)="senddata(form.value)">
+            <div class="form-check-inline text-dark"></div>
+            <input type="radio" name="name" id="" class="form-check-control" value="admin" ngModel>ADMIN           
+             <input type="radio" name="name" id="" class="form-check-control" value="user" ngModel>USER
+         <br>
+        <label class="text-dark">Username</label>
+        <input type="text" class="form-control" name="username" #username="ngModel" id="" ngModel>
+        <label class="text-dark">Password</label>
+        <input type="password" class="form-control" name="password" #username="ngModel" id="" ngModel>
+        <br>
+        <button class="btn btn-danger" type="submit">LOGIN</button>
+        </form>
+    </div>
+</div>
+ 

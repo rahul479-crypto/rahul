@@ -1,0 +1,51 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            <div class="jumbotron  mt-5 bg-dark">
+                <h1 class="text-primary text-centre">REGISTRATION FORM</h1>
+                <form #form="ngForm"(ngSubmit)=" submitUserData(form.value)">
+                    <label for="" class="text-light">NAME</label>
+                                         <input type ="text" 
+                                                 name="name" 
+                                          class="form-control" 
+                                                     required     id="" 
+                                                  #name="ngModel" 
+                                                   ngModel>
+                    
+                        
+                    
+                    <label for ="username" class="text-light">USERNAME</label>
+                                             <input type="text"
+                                               name="username" 
+                                             class="form-control"
+                                             
+                                                 #username="ngModel"
+                                                           ngModel>
+                    
+                    <label for="" class="text-light">PASSWORD</label>
+                    <input type="password " name="password" class="form-control" id="" #password="ngModel"  ngModel>
+                    
+                    <label for="" class="text-light">CONFIRMPASSWORD</label>
+                            <input type="confirmed" class="form-control" ngModel name="confirmpassword" #confirmpassword="ngModel" required  pattern={{password.value}}>
+                            
+                    <label for="" class="text-light">DATEOFBIRTH</label>
+                    <input type="date" name="date" class="form-control" id="" #dateofbirth="ngModel" ngModel>
+                    <label for="" class="text-light">MOBILENUMBER</label>
+                    <input type="number" name="number" class="form-control" id="" #mobilenumber="ngModel"  ngModel>
+                    
+                    <button class="btn btn-success" type="submit">SUBMIT</button>
+
+
+                </form>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+
+
+        
+    </div>
+</div>
+
